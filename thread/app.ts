@@ -67,7 +67,7 @@ app.post('/api/chat', async (req, res) => {
 // Demo endpoint POST /api/demo
 app.post('/api/demo', async (req, res) => {
   const demoMessages: ChatCompletionMessageParam[] = [
-    { content: "Hi! I'm Adam", role: "user" },
+    { content: "Hi! I'm Jarek", role: "user" },
     { content: "How are you?", role: "user" },
     { content: "Do you know my name?", role: "user" }
   ];
@@ -76,7 +76,7 @@ app.post('/api/demo', async (req, res) => {
 
   for (const message of demoMessages) {
     console.log('--- NEXT TURN ---');
-    console.log('Adam:', message.content);
+    console.log('Jarek:', message.content);
 
     try {
       const systemPrompt = createSystemPrompt(previousSummarization);
